@@ -1,0 +1,161 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/x2JnJSg/resorts1.jpg",
+      "estate_title": "Luxurious Beachfront Resort with Stunning Ocean Views",
+      "segment_name": "Resorts",
+      "description": "This exquisite beachfront resort offers unparalleled luxury and comfort. Situated on the pristine shores of a private beach, the resort features elegantly designed rooms and suites with breathtaking ocean views. The property boasts a world-class spa, multiple fine dining options, and a variety of recreational activities including water sports, tennis courts, and a fitness center. The resort is perfect for both relaxation and adventure, with its beautifully landscaped gardens and easy access to nearby attractions. Guests can enjoy a tranquil escape while being just a short drive from the vibrant nightlife and shopping districts. The resort also offers a large conference center, making it an ideal destination for business travelers and events. Whether you're planning a romantic getaway or a family vacation, this resort promises an unforgettable experience.",
+      "price": 1500000,
+      "status": "sale",
+      "area": "50000 sqft",
+      "location": "Malibu, California",
+      "facilities": [
+        "Living room",
+        "Swimming pool",
+        "Private beach",
+        "Spa",
+        "Gourmet restaurant"
+      ]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/Lz4CBMS/hotel1.jpg",
+      "estate_title": "Charming Boutique Hotel in the Heart of the City",
+      "segment_name": "Hotels",
+      "description": "Nestled in the bustling city center, this charming boutique hotel offers a perfect blend of modern amenities and classic elegance. The hotel's stylish rooms are designed with comfort in mind, featuring plush bedding, high-speed internet, and flat-screen TVs. Guests can start their day with a complimentary breakfast in the cozy dining area or enjoy a cup of coffee on the outdoor terrace. The hotel is within walking distance of major attractions, shopping districts, and public transportation, making it an ideal choice for tourists and business travelers alike. With its personalized service and attention to detail, this boutique hotel ensures a memorable stay for all guests. Whether you're visiting for a weekend getaway or an extended stay, you'll find everything you need to feel at home.",
+      "price": 900000,
+      "status": "sale",
+      "area": "15000 sqft",
+      "location": "New York, New York",
+      "facilities": [
+        "Living room",
+        "Breakfast area",
+        "Outdoor terrace",
+        "Concierge service"
+      ]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/QYcXjhX/Vacation-Rentals1.jpg",
+      "estate_title": "Spacious Vacation Rental with Mountain Views",
+      "segment_name": "Vacation Rentals",
+      "description": "Escape to this spacious vacation rental nestled in the mountains, where you can enjoy breathtaking views and the tranquility of nature. The property features a large living area with a stone fireplace, a fully equipped kitchen, and multiple bedrooms with en-suite bathrooms. The outdoor deck is perfect for relaxing or dining al fresco while taking in the stunning scenery. Guests can explore nearby hiking trails, visit local wineries, or simply unwind in the hot tub under the stars. The vacation rental is ideal for families or groups looking for a peaceful retreat with all the comforts of home. With its serene location and modern amenities, this property offers a perfect balance of adventure and relaxation.",
+      "price": 5000,
+      "status": "rent",
+      "area": "3000 sqft",
+      "location": "Aspen, Colorado",
+      "facilities": [
+        "Living room",
+        "Hot tub",
+        "Fully equipped kitchen",
+        "Outdoor deck",
+        "Fireplace"
+      ]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/SB8Cnyg/lodges.jpg",
+      "estate_title": "Cozy Woodland Lodge with Rustic Charm",
+      "segment_name": "Lodges",
+      "description": "This cozy woodland lodge offers a rustic charm that is perfect for nature lovers and those seeking a peaceful retreat. Surrounded by dense forest, the lodge features a warm and inviting interior with wooden beams, a stone fireplace, and comfortable furnishings. The property includes a large living room, a fully equipped kitchen, and several bedrooms, each with beautiful views of the surrounding woods. Guests can enjoy outdoor activities such as hiking, fishing, and bird watching, or simply relax on the porch with a good book. The lodge is located near several state parks and is a short drive from charming small towns with local shops and restaurants. Whether you're looking for a weekend getaway or a longer stay, this lodge provides a perfect escape from the hustle and bustle of everyday life.",
+      "price": 200000,
+      "status": "sale",
+      "area": "3500 sqft",
+      "location": "Smoky Mountains, Tennessee",
+      "facilities": [
+        "Living room",
+        "Fireplace",
+        "Fully equipped kitchen",
+        "Porch",
+        "Hiking trails"
+      ]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/fMxGr4s/Guesthouses.jpg",
+      "estate_title": "Elegant Guesthouse with Garden Views",
+      "segment_name": "Guesthouses",
+      "description": "This elegant guesthouse offers a serene and comfortable stay with beautiful garden views. The property is tastefully decorated with a blend of classic and contemporary styles, featuring spacious rooms, high ceilings, and large windows that allow natural light to flood the space. Guests can enjoy a leisurely breakfast in the sunny dining room or take a stroll through the well-maintained gardens. The guesthouse is located in a quiet neighborhood, yet is just minutes away from the city center, making it an ideal choice for those looking to explore the area while having a peaceful retreat to return to. Whether you're traveling for business or leisure, this guesthouse offers a welcoming atmosphere and all the amenities you need for a relaxing stay.",
+      "price": 3000,
+      "status": "rent",
+      "area": "2500 sqft",
+      "location": "Charleston, South Carolina",
+      "facilities": [
+        "Living room",
+        "Garden",
+        "Dining room",
+        "High-speed internet"
+      ]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/YfFXDYd/motels.jpg",
+      "estate_title": "Affordable Motel with Convenient Highway Access",
+      "segment_name": "Motels",
+      "description": "This affordable motel offers a comfortable stay for travelers seeking convenient highway access. Located just off the main interstate, the motel provides easy access to nearby attractions and dining options. The rooms are clean and functional, featuring basic amenities such as air conditioning, cable TV, and free Wi-Fi. Guests can park their vehicles right outside their rooms, making it an ideal choice for those on road trips or needing a quick overnight stay. The motel also offers a 24-hour front desk and complimentary coffee in the lobby. With its budget-friendly rates and essential services, this motel is perfect for travelers looking for a no-frills, convenient place to stay.",
+      "price": 50000,
+      "status": "sale",
+      "area": "8000 sqft",
+      "location": "Orlando, Florida",
+      "facilities": [
+        "Parking",
+        "24-hour front desk",
+        "Free Wi-Fi",
+        "Air conditioning"
+      ]
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co/qWLcRFS/resorts2.jpg",
+      "estate_title": "Eco-Friendly Mountain Resort with Outdoor Adventures",
+      "segment_name": "Resorts",
+      "description": "Experience a unique stay at this eco-friendly mountain resort, where sustainability meets luxury. The resort is designed to blend seamlessly with its natural surroundings, using locally sourced materials and renewable energy. Guests can enjoy a variety of outdoor adventures such as hiking, mountain biking, and guided nature walks. The resort also offers yoga sessions, a wellness spa, and organic farm-to-table dining. Each room is designed with comfort in mind, featuring natural fabrics, handcrafted furniture, and breathtaking views of the mountains. Perfect for those looking to reconnect with nature, this resort offers an unforgettable experience in a tranquil setting.",
+      "price": 1200000,
+      "status": "sale",
+      "area": "40000 sqft",
+      "location": "Vail, Colorado",
+      "facilities": [
+        "Yoga studio",
+        "Wellness spa",
+        "Organic restaurant",
+        "Mountain biking trails",
+        "Eco-friendly design"
+      ]
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co/jRN6pY1/hotel2.jpg",
+      "estate_title": "Modern City Hotel with Rooftop Bar and Skyline Views",
+      "segment_name": "Hotels",
+      "description": "Located in the heart of the city, this modern hotel offers a vibrant urban experience with sleek design and top-notch amenities. Guests can enjoy stunning skyline views from the rooftop bar, which serves a variety of cocktails and light bites. The hotel features stylish rooms equipped with the latest technology, including smart TVs, high-speed internet, and automated room controls. The on-site restaurant offers a menu of international cuisine, while the fitness center is available for those looking to stay active during their stay. With its prime location and contemporary amenities, this hotel is perfect for business travelers and tourists alike.",
+      "price": 800000,
+      "status": "sale",
+      "area": "20000 sqft",
+      "location": "Chicago, Illinois",
+      "facilities": [
+        "Rooftop bar",
+        "Fitness center",
+        "On-site restaurant",
+        "Skyline views"
+      ]
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co/N3mjZ9j/Vacation-Rentals2.jpg",
+      "estate_title": "Charming Cottage by the Lake with Private Dock",
+      "segment_name": "Vacation Rentals",
+      "description": "This charming lakeside cottage offers a peaceful retreat with stunning views and direct access to the water. The cottage features a cozy interior with a stone fireplace, fully equipped kitchen, and comfortable bedrooms. The outdoor space includes a private dock where guests can enjoy swimming, fishing, or simply relaxing by the water. The surrounding area is perfect for outdoor activities such as kayaking, hiking, and bird watching. The cottage is also close to a quaint town with local shops and dining options. Ideal for families or couples, this vacation rental provides a perfect blend of relaxation and adventure in a picturesque setting.",
+      "price": 4000,
+      "status": "rent",
+      "area": "1800 sqft",
+      "location": "Lake Tahoe, California",
+      "facilities": [
+        "Private dock",
+        "Fireplace",
+        "Fully equipped kitchen",
+        "Lake views",
+        "Kayaking"
+      ]
+    }
+  ]
+  
