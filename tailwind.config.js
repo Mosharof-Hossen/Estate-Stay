@@ -5,8 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'font-poppins' : '"Poppins", sans-serif',
+        'font-pacifico' : '"Pacifico", cursive'
+      },
+      colors:{
+        'primary-color' : "#23be0a"
+      }
+    },
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [require('daisyui'),],
 }
 
