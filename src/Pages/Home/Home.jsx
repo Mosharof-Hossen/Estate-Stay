@@ -4,7 +4,7 @@ import Categories from "../../Shared/Categories/Categories";
 
 const Home = () => {
     return (
-        <div className="">
+        <div className="space-y-5">
             <Banner></Banner>
             <Categories></Categories>
         </div>
