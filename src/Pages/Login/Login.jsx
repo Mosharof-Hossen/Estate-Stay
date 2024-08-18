@@ -1,10 +1,12 @@
+import { faFacebook, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-    const [eyeOn,setEyeOn] = useState(true)
+    const [eyeOn, setEyeOn] = useState(true)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -13,7 +15,7 @@ const Login = () => {
     console.log(errors);
     return (
         <div className="bg-gray-200 h-screen p-10">
-            
+
             <div className="md:w-2/3 lg:w-1/2 mx-auto   rounded-lg bg-white p-12 shadow-lg">
                 <h1 className="text-center text-3xl font-semibold ">Login Your Account</h1>
                 <hr className="my-8" />
@@ -32,10 +34,10 @@ const Login = () => {
                         Password
                         <br />
                         <div className="relative">
-                            <input type={eyeOn?"password":"text"} className="border w-full mb-1 p-2 rounded" placeholder="Enter your password" {...register("password", { required: true })} />
-                            <span className="absolute right-3 top-3" onClick={()=>setEyeOn(!eyeOn)}>
+                            <input type={eyeOn ? "password" : "text"} className="border w-full mb-1 p-2 rounded" placeholder="Enter your password" {...register("password", { required: true })} />
+                            <span className="absolute right-3 top-3" onClick={() => setEyeOn(!eyeOn)}>
                                 {
-                                    eyeOn?<FaEye></FaEye>: <FaEyeSlash></FaEyeSlash>
+                                    eyeOn ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
                                 }
                             </span>
 
@@ -49,8 +51,25 @@ const Login = () => {
                     <input className="py-2 bg-primary-color w-full rounded text-white cursor-pointer mt-5" type="submit" value={"Login"} />
                 </form>
                 <p className="font-bold my-5 text-center">Do not have an Account? <Link to={'/register'}><span className="text-red-600">Register</span></Link></p>
+
+                <div className="divider divider-success my-8">Or</div>
+
+                <div className="space-x-5 text-center">
+                    <button className="btn bg-primary-color hover:text-black text-white">
+                        Google
+                        <FontAwesomeIcon icon={faGoogle} />
+                    </button>
+                    <button className="btn bg-primary-color  hover:text-black text-white">
+                        Github
+                        <FontAwesomeIcon icon={faGithub} />
+                    </button>
+                    <button className="btn bg-primary-color  hover:text-black text-white">
+                        Google
+                        <FontAwesomeIcon icon={faFacebook} />
+                    </button>
+                </div>
             </div>
-            
+
         </div>
     );
 };
