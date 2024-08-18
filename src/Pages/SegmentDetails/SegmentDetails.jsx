@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaAngellist, FaChartArea, FaCircleArrowRight, FaCircleDollarToSlot, FaLocationDot, FaPhone, FaSellcast, FaShieldHeart } from "react-icons/fa6";
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SegmentDetails = () => {
@@ -13,7 +15,9 @@ const SegmentDetails = () => {
         setSegmentsData(filteredData);
     }, [data, segmentId])
 
-    console.log(segmentsData);
+    const handleToast = () => {
+        toast("Thanks. We will contact you!!")
+    }
     return (
         <div className="p-5 ">
             <div className="grid grid-cols-1 md:grid-cols-3">
@@ -26,7 +30,7 @@ const SegmentDetails = () => {
 
                     </div>
                 </div>
-                <div className="col-span-1 mt-3 p-3 lg:pl-10 space-y-3 bg-slate-100">
+                <div className="rounded col-span-1 mt-3 p-3 lg:pl-10 space-y-3 bg-slate-100">
                     <h3 className="text-2xl font-bold">Property Details</h3>
                     <hr className="my-4" />
                     <div className="space-y-2">
@@ -50,7 +54,8 @@ const SegmentDetails = () => {
 
                     </div>
                     <div className="lg:pr-10">
-                        <button className=" mt-5 px-3 md:w-full py-2 bg-primary-color rounded text-white">Apply Now</button>
+                        <button onClick={handleToast} className=" mt-5 px-3 md:w-full py-2 bg-primary-color rounded text-white">Apply Now</button>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>

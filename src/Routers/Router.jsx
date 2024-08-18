@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Profile from "../Pages/Profile/Profile";
 import SegmentDetails from "../Pages/SegmentDetails/SegmentDetails";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -23,9 +25,17 @@ const router = createBrowserRouter([
                 element: <Profile></Profile>
             },
             {
-                path:"/segment-details/:segmentId",
-                loader:()=> fetch("../data.json"),
-                element:<SegmentDetails></SegmentDetails>
+                path: "/segment-details/:segmentId",
+                loader: () => fetch("../data.json"),
+                element: <SegmentDetails></SegmentDetails>
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path:"/register",
+                element:<Register></Register>
             }
         ]
     }
