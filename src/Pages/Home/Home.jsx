@@ -1,10 +1,12 @@
 import Banner from "../../Shared/Banner/Banner";
+import Categories from "../../Shared/Categories/Categories";
 
 
 const Home = () => {
     return (
-        <div className="my-12">
+        <div className="">
             <Banner></Banner>
+            <Categories></Categories>
         </div>
     );
 };

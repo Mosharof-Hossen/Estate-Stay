@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/rbJbMZW/hotel.png",
+      "category": "Hotels",
+      "achievement": "City Luxury at Its Best"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/9ZLQC7d/resorts.png",
+      "category": "Resorts",
+      "achievement": "Unparalleled Oceanfront Elegance"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/tP2fHKn/lodges.png",
+      "category": "Lodges",
+      "achievement": "Rustic Charm, Nature Retreat"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/r2dnS0c/vacationrentals.png",
+      "category": "Vacation Rentals",
+      "achievement": "Scenic Getaways, Cozy Comfort"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/t4pB1Nv/gueshhouses.png",
+      "category": "Guesthouses",
+      "achievement": "Elegance Meets Tranquility"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/Cm9PGr7/motels.png",
+      "category": "Motels",
+      "achievement": "Convenient Stays, Budget Friendly"
+    }
+  ]
+  
