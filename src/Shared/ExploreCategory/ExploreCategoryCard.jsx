@@ -1,10 +1,10 @@
 import { FaLocationDot } from "react-icons/fa6";
 import PropTypes from 'prop-types';
 import { FaFunnelDollar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ExploreCategoryCard = ({ singleCategory }) => {
-    console.log(singleCategory);
-    const { image, estate_title, segment_name, location, price, status } = singleCategory
+    const {id, image, estate_title, segment_name, location, price, status } = singleCategory
     return (
         <div className="card bg-base-100 rounded  shadow-xl">
             <figure>
@@ -25,7 +25,7 @@ const ExploreCategoryCard = ({ singleCategory }) => {
 
                 </div>
                 <div className="card-actions ">
-                    <button className="px-3 py-1 bg-primary-color text-white rounded">ViewProperty</button>
+                    <Link to={`segment-details/${id}`}><button className="px-3 py-2  bg-primary-color text-white rounded">View Property </button></Link>
                 </div>
             </div>
         </div>

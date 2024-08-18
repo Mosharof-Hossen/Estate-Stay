@@ -3,6 +3,7 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Profile from "../Pages/Profile/Profile";
+import SegmentDetails from "../Pages/SegmentDetails/SegmentDetails";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
             {
                 path: "/profile",
                 element: <Profile></Profile>
+            },
+            {
+                path:"/segment-details/:segmentId",
+                loader:()=> fetch("../data.json"),
+                element:<SegmentDetails></SegmentDetails>
             }
         ]
     }
