@@ -16,7 +16,11 @@ const Navbar = () => {
     }
     const links = <>
         <li><NavLink className={"lg:px-3 lg:py-2 block p-2 rounded mx-2 font-semibold"} to={'/'} >Home</NavLink ></li>
-        <li><NavLink className={"lg:px-3 lg:py-2 block p-2 rounded mx-2 font-semibold"} to={'/profile'} >Profile</NavLink ></li>
+        {
+            user ?
+                <li><NavLink className={"lg:px-3 lg:py-2 block p-2 rounded mx-2 font-semibold"} to={'/profile'} >Profile</NavLink ></li>
+                : ""
+        }
         <li><NavLink className={"lg:px-3 lg:py-2 block p-2 rounded mx-2 font-semibold"} to={'/about'} >About</NavLink ></li>
 
     </>

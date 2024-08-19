@@ -1,9 +1,8 @@
-import { faFacebook, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 
@@ -11,7 +10,7 @@ import { updateProfile } from "firebase/auth";
 const Register = () => {
     const { crateUserByEmailPassword } = useContext(AuthContext);
     const [errMsg, setErrMsg] = useState("");
-
+    const navigate = useNavigate()
     const [eyeOn, setEyeOn] = useState(true)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
@@ -21,11 +20,11 @@ const Register = () => {
                     displayName: data.name,
                     photoURL: data.photo
                 }).then(() => {
-                    
                     setErrMsg("")
+                    navigate("/")
                 })
-                .catch(err=>{
-                    console.log(err);
+                .catch(()=>{
+                    
                 })
 
             })
@@ -106,22 +105,6 @@ const Register = () => {
                 </form>
                 <p className="font-bold my-5 text-center">Already have an Account? <Link to={'/login'}><span className="text-red-600">Login</span></Link></p>
 
-                <div className="divider divider-success my-8">Or</div>
-
-                <div className="space-x-5 text-center">
-                    <button className="btn bg-primary-color hover:text-black text-white">
-                        Google
-                        <FontAwesomeIcon icon={faGoogle} />
-                    </button>
-                    <button className="btn bg-primary-color  hover:text-black text-white">
-                        Github
-                        <FontAwesomeIcon icon={faGithub} />
-                    </button>
-                    <button className="btn bg-primary-color  hover:text-black text-white">
-                        Google
-                        <FontAwesomeIcon icon={faFacebook} />
-                    </button>
-                </div>
             </div>
 
         </div>
