@@ -10,12 +10,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-    const { loginByEmailPassword, loginByGoogle } = useContext(AuthContext);
+    const { loginByEmailPassword, loginByGoogle, loginByGithub } = useContext(AuthContext);
     const [eyeOn, setEyeOn] = useState(true)
     const [err, setErr] = useState("")
     const location = useLocation()
     const navigate = useNavigate()
-    console.log(location);
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         loginByEmailPassword(data.email, data.password)
@@ -36,7 +36,11 @@ const Login = () => {
             })
     }
     const handleGithubLogin = () => {
-
+        loginByGithub()
+            .then(() => {
+                setErr("");
+                navigate(location?.state ? location.state : "/")
+            })
     }
     return (
         <div className="bg-gray-200 h-screen p-10">
