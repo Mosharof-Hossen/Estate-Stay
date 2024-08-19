@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import { FaFunnelDollar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const ExploreCategoryCard = ({ singleCategory }) => {
-    const {id, image, estate_title, segment_name, location, price, status } = singleCategory
+    const { id, image, estate_title, segment_name, location, price, status } = singleCategory
     return (
-        <div className="card bg-base-100 rounded  shadow-xl">
+        <div className="card bg-base-100 rounded  shadow-xl" data-aos="flip-left" data-aos-delay="300">
             <figure>
                 <img
                     src={image}
