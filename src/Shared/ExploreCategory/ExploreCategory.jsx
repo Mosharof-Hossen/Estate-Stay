@@ -10,7 +10,6 @@ const ExploreCategory = () => {
         .then(data=>setAllCategoryData(data))
     },[])
 
-    console.log(allCategoryData);
     return (
         <div className="p-5 space-y-10">
             <div className="text-center space-y-4">
