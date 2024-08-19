@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA4-5bqetJiqMV1LQwy_RkZXr23RqY3IbY",
-    authDomain: "estate-stay.firebaseapp.com",
-    projectId: "estate-stay",
-    storageBucket: "estate-stay.appspot.com",
-    messagingSenderId: "682563297059",
-    appId: "1:682563297059:web:7ca4f116754e8cc63c3696"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
