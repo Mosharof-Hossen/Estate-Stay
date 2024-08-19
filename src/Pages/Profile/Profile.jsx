@@ -1,9 +1,9 @@
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 
 const Profile = () => {
@@ -26,7 +26,9 @@ const Profile = () => {
     };
     return (
         <div className="bg-gray-200 h-screen p-10">
-
+            <Helmet>
+                <title>Estate Stay | Profile</title>
+            </Helmet>
             <div className="md:w-2/3 lg:w-1/2 mx-auto   rounded-lg bg-white p-12 shadow-lg">
                 <h1 className="text-center text-3xl font-semibold ">Profile Update</h1>
                 <hr className="my-8" />
