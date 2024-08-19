@@ -1,18 +1,18 @@
-import { faFacebook, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { ToastContainer,  } from 'react-toastify';
+import { ToastContainer, } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-    const { loginByEmailPassword } = useContext(AuthContext);
+    const { loginByEmailPassword, loginByGoogle } = useContext(AuthContext);
     const [eyeOn, setEyeOn] = useState(true)
-    const [err,setErr] = useState("")
+    const [err, setErr] = useState("")
     const location = useLocation()
     const navigate = useNavigate()
     console.log(location);
@@ -21,13 +21,23 @@ const Login = () => {
         loginByEmailPassword(data.email, data.password)
             .then(() => {
                 setErr("");
-                navigate(location?.state ? location.state:"/");
+                navigate(location?.state ? location.state : "/");
             })
-            .catch(()=>{
+            .catch(() => {
                 setErr("Invalid Email or Password")
             })
     };
-    console.log(errors);
+
+    const handleGoogleLogin = () => {
+        loginByGoogle()
+            .then(() => {
+                setErr("");
+                navigate(location?.state ? location.state : "/")
+            })
+    }
+    const handleGithubLogin = () => {
+
+    }
     return (
         <div className="bg-gray-200 h-screen p-10">
             <Helmet>
@@ -68,7 +78,7 @@ const Login = () => {
                     <input className="py-2 bg-primary-color w-full rounded text-white cursor-pointer mt-5" type="submit" value={"Login"} />
                     <ToastContainer />
                     {
-                        err? <p className="text-center text-red-500 mt-3">{err}</p>:""
+                        err ? <p className="text-center text-red-500 mt-3">{err}</p> : ""
                     }
                 </form>
                 <p className="font-bold my-5 text-center">Do not have an Account? <Link to={'/register'}><span className="text-red-600">Register</span></Link></p>
@@ -76,18 +86,15 @@ const Login = () => {
                 <div className="divider divider-success my-8">Or</div>
 
                 <div className="space-x-5 text-center">
-                    <button className="btn bg-primary-color hover:text-black text-white">
+                    <button onClick={handleGoogleLogin} className="btn bg-primary-color hover:text-black text-white">
                         Google
                         <FontAwesomeIcon icon={faGoogle} />
                     </button>
-                    <button className="btn bg-primary-color  hover:text-black text-white">
+                    <button onClick={handleGithubLogin} className="btn bg-primary-color  hover:text-black text-white">
                         Github
                         <FontAwesomeIcon icon={faGithub} />
                     </button>
-                    <button className="btn bg-primary-color  hover:text-black text-white">
-                        Google
-                        <FontAwesomeIcon icon={faFacebook} />
-                    </button>
+
                 </div>
             </div>
 
