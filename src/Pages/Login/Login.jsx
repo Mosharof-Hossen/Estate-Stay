@@ -3,21 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer,  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { loginByEmailPassword } = useContext(AuthContext);
     const [eyeOn, setEyeOn] = useState(true)
     const [err,setErr] = useState("")
+    const location = useLocation()
+    const navigate = useNavigate()
+    console.log(location);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         loginByEmailPassword(data.email, data.password)
             .then(() => {
                 setErr("");
-
+                navigate(location?.state ? location.state:"/");
             })
             .catch(()=>{
                 setErr("Invalid Email or Password")

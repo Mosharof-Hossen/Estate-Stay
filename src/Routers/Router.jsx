@@ -6,6 +6,7 @@ import Profile from "../Pages/Profile/Profile";
 import SegmentDetails from "../Pages/SegmentDetails/SegmentDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -27,15 +28,15 @@ const router = createBrowserRouter([
             {
                 path: "/segment-details/:segmentId",
                 loader: () => fetch("../data.json"),
-                element: <SegmentDetails></SegmentDetails>
+                element: <PrivateRoute><SegmentDetails></SegmentDetails></PrivateRoute>
             },
             {
                 path: "/login",
                 element: <Login></Login>
             },
             {
-                path:"/register",
-                element:<Register></Register>
+                path: "/register",
+                element: <Register></Register>
             }
         ]
     }
