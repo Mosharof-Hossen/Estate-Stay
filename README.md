@@ -1,8 +1,23 @@
-# React + Vite
+# Project Name : [Estate Stay](https://estate-stay.web.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features: 
+1. It is a News portal website.
+2. Basically we implemented firebase authentication like google singin,github signin, email password singin, Registration etc.
+3. Also we used private route.
+4. Here I used Local storage.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tools: 
+1.React Js
+
+2.Tailwind CSS
+
+3.Font Awesome icon
+
+4.Responsive
+
+5.DaisyUI
+
+6.Use Fake Data
+
+
