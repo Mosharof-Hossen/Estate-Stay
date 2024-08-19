@@ -16,7 +16,7 @@ const ExploreCategory = () => {
                 <h1 className="md:text-5xl text-3xl  font-bold">Explore Our Top Listings</h1>
                 <p className="text-gray-500">Explore various opportunities with all information you need. It is your future.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     allCategoryData?.map((singleData)=><ExploreCategoryCard singleCategory={singleData} key={singleData.id}></ExploreCategoryCard>)
                 }

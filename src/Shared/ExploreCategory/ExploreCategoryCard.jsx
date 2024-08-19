@@ -24,7 +24,7 @@ const ExploreCategoryCard = ({ singleCategory }) => {
                     <button disabled className='  px-3 py-1 rounded border-2 border-primary-color bg-transparent text-primary-color '>{status}</button>
 
                 </div>
-                <div className="flex space-x-10 text-gray-500">
+                <div className="flex space-x-5 text-gray-500">
                     <p className="flex items-center space-x-1"><FaLocationDot /> <span>{location}</span></p>
                     <p className="flex items-center space-x-1"><FaFunnelDollar /> <span>Price: {price}$</span></p>
 
