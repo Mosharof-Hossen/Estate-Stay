@@ -1,10 +1,11 @@
 # Project Name : [Estate Stay](https://estate-stay.web.app/)
 
 ## Features: 
-1. It is a News portal website.
+1. It is an 'Estate Stay' website like real estate. 
 2. Basically we implemented firebase authentication like google singin,github signin, email password singin, Registration etc.
-3. Also we used private route.
-4. Here I used Local storage.
+3. You can update your profile.
+4. Also we used private route.
+5. Here I used Fake Data.
 
 
 ## Tools: 
@@ -19,5 +20,13 @@
 5.DaisyUI
 
 6.Use Fake Data
+
+7. React Hook Form
+
+8. Swiper slider
+
+9. AOS package
+
+    pro
 
 
