@@ -21,11 +21,11 @@
 
 6.Use Fake Data
 
-7. React Hook Form
+7.React Hook Form
 
-8. Swiper slider
+8.Swiper slider
 
-9. AOS package
+9.AOS package
 
     pro
 
