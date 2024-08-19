@@ -2,9 +2,9 @@
 
 ## Features: 
 1. It is an 'Estate Stay' website like real estate. 
-2. Basically we implemented firebase authentication like google singin,github signin, email password singin, Registration etc.
+2. Basically I implemented firebase authentication like google singin,github signin, email password singin, Registration etc.
 3. You can update your profile.
-4. Also we used private route.
+4. Also I used private route.
 5. Here I used Fake Data.
 
 
