@@ -1,7 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css"
+import userProfile from "../../assets/user.png"
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { toast, ToastContainer } from "react-toastify";
+
 
 const Navbar = () => {
+    const { user ,logOut} = useContext(AuthContext);
+    const handleLogout =()=>{
+        logOut()
+        .then(()=>{
+            toast("Successfully Logout")
+        })
+    }
     const links = <>
         <li><NavLink className={"lg:px-3 lg:py-2 block p-2 rounded mx-2 font-semibold"} to={'/'} >Home</NavLink ></li>
         <li><NavLink className={"lg:px-3 lg:py-2 block p-2 rounded mx-2 font-semibold"} to={'/profile'} >Profile</NavLink ></li>
@@ -44,7 +56,20 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to={"/login"}><button className="btn text-white bg-primary-color">Sign In</button></Link>
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-2">
+                    <div className="w-10 rounded-full ">
+                        <img
+                            alt="Tailwind CSS Navbar component"
+                            src={user ? user.photoURL : userProfile} />
+                    </div>
+                </div>
+                {
+                    user?
+                    <Link ><button onClick={handleLogout} className="btn text-white bg-primary-color">LogOut</button></Link>
+                    :
+                    <Link to={"/login"}><button className="btn text-white bg-primary-color">Login</button></Link>
+                }
+                <ToastContainer />
             </div>
         </div>
     );

@@ -1,17 +1,37 @@
 import { faFacebook, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
+    const { crateUserByEmailPassword } = useContext(AuthContext);
+    const [errMsg, setErrMsg] = useState("");
+
     const [eyeOn, setEyeOn] = useState(true)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
-        console.log("ok");
+        crateUserByEmailPassword(data.email, data.password)
+            .then(result => {
+                updateProfile(result.user, {
+                    displayName: data.name,
+                    photoURL: data.photo
+                }).then(() => {
+                    
+                    setErrMsg("")
+                })
+                .catch(err=>{
+                    console.log(err);
+                })
+
+            })
+            .catch(() => {
+                setErrMsg("Email already in use.")
+            })
     };
     console.log(errors);
     return (
@@ -53,7 +73,7 @@ const Register = () => {
                         Password
                         <br />
                         <div className="relative">
-                            <input type={eyeOn ? "password" : "text"} className="border w-full mb-1 p-2 rounded" placeholder="Enter your password" {...register("password", { required: true ,pattern:/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/})} />
+                            <input type={eyeOn ? "password" : "text"} className="border w-full mb-1 p-2 rounded" placeholder="Enter your password" {...register("password", { required: true, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/ })} />
                             <span className="absolute right-3 top-3" onClick={() => setEyeOn(!eyeOn)}>
                                 {
                                     eyeOn ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
@@ -79,6 +99,10 @@ const Register = () => {
                     </label>
 
                     <input className="py-2 bg-primary-color w-full rounded text-white cursor-pointer mt-5" type="submit" value={"Register"} />
+
+                    {
+                        errMsg ? <p className="text-red-600 text-center mt-3">{errMsg}</p> : ""
+                    }
                 </form>
                 <p className="font-bold my-5 text-center">Already have an Account? <Link to={'/login'}><span className="text-red-600">Login</span></Link></p>
 

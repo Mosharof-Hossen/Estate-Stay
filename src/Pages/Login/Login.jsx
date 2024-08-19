@@ -1,16 +1,27 @@
 import { faFacebook, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const { loginByEmailPassword } = useContext(AuthContext);
     const [eyeOn, setEyeOn] = useState(true)
+    const [err,setErr] = useState("")
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
-        console.log("ok");
+        loginByEmailPassword(data.email, data.password)
+            .then(() => {
+                setErr("");
+
+            })
+            .catch(()=>{
+                setErr("Invalid Email or Password")
+            })
     };
     console.log(errors);
     return (
@@ -49,6 +60,10 @@ const Login = () => {
                     </label>
 
                     <input className="py-2 bg-primary-color w-full rounded text-white cursor-pointer mt-5" type="submit" value={"Login"} />
+                    <ToastContainer />
+                    {
+                        err? <p className="text-center text-red-500 mt-3">{err}</p>:""
+                    }
                 </form>
                 <p className="font-bold my-5 text-center">Do not have an Account? <Link to={'/register'}><span className="text-red-600">Register</span></Link></p>
 
